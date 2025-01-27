@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import dbConnect from './config/db.js';
 
+
 //Guardar variables de entorno
 dotenv.config();
 
@@ -27,6 +28,7 @@ try {
     console.error('API prueba falló:',error);
 }
 });
+
 
 //Conexión servidor local
 app.listen(PORT, () => {
