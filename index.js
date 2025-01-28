@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import dbConnect from './config/db.js';
+import routes from './routes/routes.js'
 
 
 //Guardar variables de entorno
@@ -17,6 +18,8 @@ const PORT = process.env.PORT || 5000;
 
 //Conexión a base de datos
 dbConnect();
+
+app.use('/api',routes);
 
 //API prueba
 app.get('/api',(req, res) => {

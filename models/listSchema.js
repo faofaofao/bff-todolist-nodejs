@@ -5,6 +5,7 @@ const listSchema = new mongoose.Schema({
     name:{
         type: String,
         require: true,
+        trim: true,
     },
     complete:{
         type: Boolean,
