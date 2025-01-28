@@ -19,7 +19,8 @@ const PORT = process.env.PORT || 5000;
 //Conexión a base de datos
 dbConnect();
 
-app.use('/api',routes);
+//Enrutador
+app.use('/api', routes);
 
 //API prueba
 app.get('/api',(req, res) => {
@@ -31,7 +32,6 @@ try {
     console.error('API prueba falló:',error);
 }
 });
-
 
 //Conexión servidor local
 app.listen(PORT, () => {
