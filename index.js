@@ -14,6 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+//Puerto conexión servidor
 const PORT = process.env.PORT || 5000;
 
 //Conexión a base de datos

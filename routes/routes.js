@@ -35,7 +35,7 @@ router.delete('/tasks:id', async (req, res) => {
     }
 })
 
-//Actualizar documento a actualizado
+//Actualizar documento a completado
 router.patch('/tasks:id', async (req, res) => {
     try {
         const updateTask = await List.findByIdAndUpdate(req.params.id, req.body, {
