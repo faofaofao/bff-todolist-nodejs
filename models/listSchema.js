@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-//Esquema para cada dato ingresado en la base de datos
+//Esquema para cada documento ingresado en la base de datos
 const listSchema = new mongoose.Schema({
     name:{
         type: String,
@@ -13,7 +13,7 @@ const listSchema = new mongoose.Schema({
     }
 });
 
-//Modelo a instanciar en solicitudes HTTTP. Coleccion creada.
+//Modelo a instanciar en solicitudes HTTP. Coleccion creada.
 const List = new mongoose.model("To-Do-List", listSchema);
 
 export default List;

@@ -14,7 +14,7 @@ router.get('/tasks', async (req, res) => {
     }
 })
 
-//Ingresar un documento dato a la base de datos
+//Ingresar un documento nuevo a la base de datos
 router.post('/tasks', async (req, res) => {
     try {
         const newTask = new List(req.body);
