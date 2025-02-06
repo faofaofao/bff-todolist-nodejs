@@ -26,7 +26,7 @@ router.post('/tasks', async (req, res) => {
 })
 
 //Eliminar un documento de la base de datos con la ID
-router.delete('/tasks:id', async (req, res) => {
+router.delete('/tasks/:id', async (req, res) => {
     try {
         await List.findByIdAndDelete(req.params.id);
         res.status(200).json({ message: 'Tarea eliminada con éxito'});
@@ -36,7 +36,7 @@ router.delete('/tasks:id', async (req, res) => {
 })
 
 //Actualizar documento a completado
-router.patch('/tasks:id', async (req, res) => {
+router.patch('/tasks/:id', async (req, res) => {
     try {
         const updateTask = await List.findByIdAndUpdate(req.params.id, req.body, {
             complete:true,
